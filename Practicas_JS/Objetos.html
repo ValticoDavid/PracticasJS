@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Objetos en JS</title>
+</head>
+
+<body>
+    <h1>Trabajando con objetos</h1>
+    <p id="demo"></p>
+
+    <script>
+
+        // Creamos el obeto auto
+        let auto = {
+            marca: "Ford", modelo: "Raptor", color: "Negro",
+
+            // Mostramo los datos de objeto
+            mostrarDatos: function () {
+                return "Marca: " + this.marca + "<br>" + "Modelo: " + this.modelo + "<br>" + "Color: " + this.color;
+            }
+        };
+        document.getElementById("demo").innerHTML = auto.mostrarDatos();
+
+        // Otra forma de crear objetos
+        function Persona(nombre, edad, genero) {
+            this.nombre = nombre;
+            this.edad = edad;
+            this.genero = genero;
+        }
+
+        Persona.prototype.mostrarInfo = function () {
+            console.log(this.nombre + " del genero " + this.genero + " tiene " + this.edad + " años");
+        }
+
+        const persona_1 = new Persona("Carolina", 26, "Femenino");
+        persona_1.mostrarInfo();
+        const persona_2 = new Persona("Noemi", 35, "Mujer");
+        persona_2.mostrarInfo();
+        const persona_3 = new Persona("David", 26, "Masculin");
+        persona_3.mostrarInfo();
+
+
+    </script>
+
+</body>
+
+</html>

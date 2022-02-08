@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura IF ELSE</title>
+</head>
+
+<body>
+    <h1>Estatus de edad</h1>
+    <input type="text" id="edad" placeholder="Introduce tu edad">
+    <button id="btnValidad">Status</button>
+    <div id="info"></div>
+
+    <script>
+        // Constante que referencia al boton validar
+        const btn = document.getElementById('btnValidad');
+
+        // Función par recuperar la informacion del input
+        function esMayor() {
+            let edad = document.getElementById('edad').value;
+            edad = parseInt(edad);
+            let mensaje = "";
+            if (edad >= 18) {
+                mensaje = "Eres mayor de edad";
+            } else {
+                mensaje = "Eres menor de edad";
+            }
+            document.getElementById('info').innerHTML = edad;
+        }
+
+        // Asignamos la constante al boton de la función
+        btn.onclick = esMayor;
+    </script>
+
+</body>
+
+</html>

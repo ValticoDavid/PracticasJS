@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otro ejercicio de Arreglos</title>
+</head>
+
+<body>
+    <h1>Arreglos en JS</h1>
+    <p id="info"></p>
+    <p id="datos"></p>
+
+
+    <script>
+        // Arreglo
+        let frutas = ["Manzana", "Pera", "Naranja", "Fresa", "Platano"];
+
+        // Vamos a imprimirlo
+        let text = "";
+
+        // Esto seria una especia de forEach
+        let valor;
+        for (valor of frutas) {
+            text += valor + "<br>"
+        }
+        document.getElementById('info').innerHTML = text;
+
+        // Podemos acceder a los miembros de un arreglo pero usando nombres
+        let persona = {
+            nombre: "David",
+            apellido: "Magaña",
+            edad: "26"
+        };
+        document.getElementById('datos').innerHTML = persona["nombre"];
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos en JavaScript</title>
+</head>
+
+<body>
+    <h1>Arreglos en JavaScript</h1>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <p id="demo4"></p>
+
+    <h2>Otra forma de imprimir el arreglo</h2>
+    <p id="info"></p>
+
+
+    <script>
+        // Arreglo o lista de elementos
+        let autos = ["Mustan ", "Camaro ", "Challenger ", "Raptor "];
+
+        // Impresion de lista
+        document.getElementById("demo").innerHTML = autos;
+
+        // Mostramos los elementos del arreglo por consola
+        console.log(autos.length);
+
+        // Buscamos la posicion del elemtento en el arreglo
+        console.log("En que posicion esta raptor: " + autos.indexOf('Raptor '));
+
+        // Agreamos un elemento al final de la lista
+        autos.push('Fiat ');
+        document.getElementById("demo3").innerHTML = autos;
+
+        // Quitamos el ultimo elemento del arreglo
+        autos.pop('Fiat ');
+        document.getElementById("demo4").innerHTML = autos;
+
+        // Mostramos elementos del arreglo con un ciclo
+        let text = "";
+        for (let i = 0; i < autos.length; i++) {
+            // Mostramos los elementos con salto de linea
+            text += autos[i] + "<br>";
+        }
+        // Imprimimos la el arreglo del ciclo for
+        document.getElementById("demo2").innerHTML = text;
+
+        // Otra forma de recorrer un arreglo ForEach
+        text = "<ul>"
+        autos.forEach(recuperaValor);
+        text += "</ul>"
+
+        function recuperaValor(valor) {
+            text += "<li>" + valor + "</li>";
+        }
+        document.getElementById('info').innerHTML = text;
+    </script>
+</body>
+
+</html>

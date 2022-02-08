@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 3 | JS</title>
+</head>
+
+<body>
+    <h1>Práctica 3 | JS</h1>
+
+    <p id="demo">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptates adipisci vero, a deserunt tenetur suscipit, tempore sequi quae doloremque tempora explicabo, quis ad sint dolorem iure reiciendis? Hic, tempora nulla?</p>
+
+    <button>Da clik aquí</button>
+
+    <script>
+        const boton = document.querySelector('button');
+        boton.addEventListener('click', actualizaInfo);
+
+        function actualizaInfo() {
+            let info = prompt("Escribe un texto");
+            document.getElementById('demo').innerHTML = info;
+        }
+    </script>
+
+</body>
+
+</html>

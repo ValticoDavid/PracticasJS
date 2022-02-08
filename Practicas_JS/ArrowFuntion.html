@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrow Function</title>
+</head>
+
+<body>
+    <h1>Hola, conociendo los Arrow Function</h1>
+
+    <p id="info"></p>
+    <p id="operacion"></p>
+
+    <button id="btn">Da click aquí</button>
+
+    <button id="btn2">Oprime este botón</button>
+
+    <script>
+        var saludar = nombre => "Hola " + nombre;
+        document.getElementById("info").innerHTML = saludar("Sultano");
+
+        var sumar = (num1, num2) => num1 + num2;
+
+        suma = function () {
+            document.getElementById("operacion").innerHTML = sumar(8.5, 9.3);
+        }
+        document.getElementById("btn").addEventListener("click", suma);
+
+        const boton = document.getElementById("btn2");
+        boton.addEventListener("click", () =>{
+            alert("Boton pulsado");
+        });
+
+    </script>
+
+</body>
+
+</html>

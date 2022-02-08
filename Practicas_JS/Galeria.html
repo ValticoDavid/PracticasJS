@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Uso del this JS</title>
+
+    <style>
+        h1{
+            text-align: center;
+        }
+
+        td{
+            text-align: center;
+        }
+
+        .mini{
+            opacity: 60%;
+        }
+
+        .mini:hover{
+            opacity: 1;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Galeria de Imagenes</h1>
+    <table border="1" align="center">
+        <tr>
+            <td colspan="5"><img src="img/galeria/321265.jpg" alt="" id="visor" width="512" height="384"></td>
+        </tr>
+
+        <tr>
+            <td><img src="img/galeria/3SY9k1K.png" alt="" id="visor" width="100" class="mini"></td>
+
+            <td><img src="img/galeria/b7faeab24189e6d798d7ee8eec85f082.jpg" alt="" id="visor" width="100" class="mini"></td>
+
+            <td><img src="img/galeria/bQjgCQSxtIGrVqQxst_Ot_esOFEZp4wQ4LIOo3e5XqI.jpg" alt="" id="visor" width="100" class="mini"></td>
+
+            <td><img src="img/galeria/world-of-warcraft-azeroth-viaje-papel-pintado-1920x1080-20058_48.jpg" alt="" id="visor" width="100" class="mini"></td>
+        </tr>
+    </table>
+
+    <script>
+        let miniaturas = document.getElementsByClassName("mini");
+    
+        // Obtenemos la ruta de cada imagen para mostrar el cambio de la imagen
+        let cambia = function(){
+            let ruta = this.getAttribute("src");
+            console.log(ruta);
+            document.getElementById("visor").src = ruta;
+        };
+
+        // Genera un ciclo para cada vez que se realiza un click se ejecute la función cambia
+        Array.from(miniaturas).forEach(function(miniaturas){
+            miniaturas.addEventListener("click", cambia);
+        });
+
+    </script>
+
+</body>
+
+</html>

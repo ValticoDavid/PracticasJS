@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Acceso</title>
+</head>
+
+<body>
+    <input type="number" name="edad" id="edad">
+    <button id="entrar">Entra al portal</button>
+
+    <script>
+        // Creamos una variable para guardar el dato
+        const btn = document.getElementById('entrar');
+
+        // Realizamos la funcion que pida el valor del dato guardado
+        function iniciar() {
+            let edad = document.getElementById('edad').value;
+            console.log(edad);
+            edad = parseInt(edad);
+            edad >= 18 ? (alert("OK, Puedes Ingresar"), location.assign("Continue.html")) : alert("Disculpa eres menor de edad");
+        }
+
+        btn.onclick = iniciar;
+    </script>
+
+</body>
+
+</html>

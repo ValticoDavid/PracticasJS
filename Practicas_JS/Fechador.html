@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fecha Acutal JS</title>
+
+    <style>
+        body {
+            background-color: rgb(100, 100, 100);
+        }
+        
+        p {
+            color: cadetblue;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Fecha Acutal</h1>
+    <!--Sabado 12 de Diciembre del año 2020-->
+    <p id="fecha"></p>
+
+    <script>
+        let dias = ["Domingo", "Lunes", "Martes", "Miercoles", "Jueves", "Viernes", "Sabado"];
+
+        let meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+
+        let fecha = new Date();
+        let diaSem = dias[fecha.getDay()];
+        let mes = meses[fecha.getMonth()];
+        let text = diaSem + " de " + fecha.getDate() + " de " + mes + " del año " + fecha.getFullYear();
+
+        document.getElementById('fecha').innerHTML = text;
+    </script>
+</body>
+
+</html>

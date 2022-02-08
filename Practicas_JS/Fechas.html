@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fechas en HTML</title>
+
+    <style>
+        div {
+            display: inline-block;
+            background-color: cadetblue;
+            border: solid 2px cyan;
+            color: blue;
+            padding: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1 id="fecha"></h1>
+    <div id="anio"></div>
+    <div id="mes"></div>
+    <div id="diaMes"></div>
+    <div id="hora"></div>
+    <div id="minutos"></div>
+    <div id="segundos"></div>
+    <dir id="info"></dir>
+    <p id="otroDato"></p>
+
+
+
+    <script>
+        // Mostramos los datos por separado
+        let fecha = new Date();
+        document.getElementById('fecha').innerHTML = fecha;
+        document.getElementById('anio').innerHTML = "Año: " + fecha.getFullYear();
+        document.getElementById('mes').innerHTML = "Mes: " + (fecha.getMonth() + 1);
+        document.getElementById('diaMes').innerHTML = "Día: " + fecha.getDay();
+        document.getElementById('hora').innerHTML = "Hora: " + fecha.getHours();
+        document.getElementById('minutos').innerHTML = "Minuto: " + fecha.getMinutes();
+        document.getElementById('segundos').innerHTML = "Segundo: " + fecha.getSeconds();
+
+        // Tomando el dato del día, muetsra el mensaje correspondiente al dia
+        let diaSemana = fecha.getDay();
+        let mensaje = "";
+        switch (diaSemana) {
+            case 0:
+                mensaje = "Domingo día de ir a misa";
+                break
+            case 1:
+                mensaje = "Lunes inicio de semana, vamos a trabajar";
+                break
+            case 2:
+                mensaje = "Martes día jugar videojuegos";
+                break
+            case 3:
+                mensaje = "Miercoles, ya quiero que sea viernes";
+                break
+            case 4:
+                mensaje = "Jueves, salir con los amigos";
+                break
+            case 5:
+                mensaje = "Viernes, de hoy cena pancho";
+                break
+            case 6:
+                mensaje = "Sabado, día del diplomado de programacion web";
+                break
+            default:
+                mensaje = "Día no valido";
+        }
+        document.getElementById('info').innerHTML = mensaje;
+
+        // Mostrar dato corto
+        document.getElementById('otroDato').innerHTML = (fecha.toLocaleString('en-us', {
+            hour: 'numeric',
+            hour12: true
+        }));
+    </script>
+
+</body>
+
+</html>

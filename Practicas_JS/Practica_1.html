@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 1 | JS</title>
+
+    <style>
+        body {
+            background-color: #0c354b;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Esta página ejecuta JavaScript</h1>
+    <p>Este es un párrafo</p>
+    <p id="demo"></p>
+
+    <script>
+        //Variables
+        let edad = 5;
+        let nombre = "David";
+
+        console.log("La edad es: " + edad);
+        console.log("El nombre es: " + nombre);
+
+        // "alert" arroja una ventana emergente
+        alert("Hola mundo");
+
+        // "document.write" imprime los datos directamente en el navegador
+        document.write("Hola a todos");
+
+        // "documen.getElementById("nombre")" immprime los datos que se troman por medio de un "id
+        document.getElementById("demo").innerHTML = "Este texto se cargo mediante JS";
+
+        // "consol.log" muetsra el funcionamiento por medio de la consola
+        console.log("Este es un mensaje que aparece en consola para debuguear variables o datos")
+    </script>
+</body>
+
+</html>

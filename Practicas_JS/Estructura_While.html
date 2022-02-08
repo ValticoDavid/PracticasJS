@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estructura While</title>
+</head>
+
+<body>
+    <h1>Trivia millonaria</h1>
+    <p id="info"></p>
+
+    <script>
+        let resp = 0;
+        while (resp != 6) {
+            resp = parseInt(prompt("Dime cuano es (5 + 7 ) / 2: "));
+        }
+        let text = "Tu respuesta es: " + resp;
+        document.getElementById('info').innerHTML = "Felicidades";
+    </script>
+</body>
+
+</html>

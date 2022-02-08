@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arreglos Bidemencionales</title>
+</head>
+
+<body>
+    <h1>Arreglos Bidimencionales</h1>
+    <p id="info"></p>
+    <p id="info1"></p>
+    <p id="info2"></p>
+    <p id="info3"></p>
+
+
+    <script>
+        // Arreglo de arreglos
+        var platillos = ["Ramen", "Tacos", "Pasta"];
+        var paises = ["Japon", "Mexico", "Italia"];
+        var menu = [platillos, paises];
+
+        // Impresion de posicion de cada elemento de los arreglos
+        document.getElementById('info').innerHTML = menu[0][0] +
+            "---> Pais de Origen " + menu[1][0];
+        document.getElementById('info1').innerHTML = menu[0][1] +
+            "---> Pais de Origen " + menu[1][1];
+        document.getElementById('info2').innerHTML = menu[0][2] +
+            "---> Pais de Origen " + menu[1][2];
+
+        // Otra opciones para conseguir los datos
+        let text = "<ul>";
+        for (let j = 0; j < menu[0].length; j++) {
+            text += "<li>Platillo: " + menu[0][j] + "---> Pais de Origen " + menu[1][j] + "</li>";
+        }
+        text += "</ul>";
+        document.getElementById('info3').innerHTML = text;
+    </script>
+
+</body>
+
+</html>

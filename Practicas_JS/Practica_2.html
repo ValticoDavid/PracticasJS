@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Práctica 2 | JS</title>
+
+    <style>
+        body {
+            background-color: #504d46;
+            color: white;
+        }
+    </style>
+</head>
+
+
+<body>
+    <h2 id="titulo2">Que coasa puedo hacer con JavaScript</h2>
+
+    <p>JavaScript puede camnbiar los valores de los atributos de las etiquetas HTML</p>
+
+    <p>También JS puede cambiar los estilos CSS de un elemento HTML</p>
+
+    <p id="demo2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Et, dolorem! Possimus, necessitatibus labore aliquam dolorem amet nisi fugiat nesciunt asperiores nihil? Soluta numquam, officia quis distinctio natus fuga explicabo quae.</p>
+
+    <!--Practica con JS enceder y apagar foco-->
+
+    <button onclick="document.getElementById('foco').src='img/foco_encendido.png'">Encender Foco</button>
+
+    <img id="foco" src="img/foco_apagado.png" alt="" width="140" height="243">
+
+    <button onclick="document.getElementById('foco').src='img/foco_apagado.png'">Apagar Foco</button>
+
+    <hr>
+    <button onclick="cambiaFormato()">Oprime el botón</button>
+
+    <hr>
+    <script src="Practica_2.js"></script>
+    <button onclick="ocultar()">Ocultar</button>
+    <button onclick="mostrar()">Mostrar</button>
+
+
+    <script>
+        function cambiaFormato() {
+            document.getElementById('titulo2').style.fontSize = '35px';
+            document.getElementById('titulo2').style.color = 'black';
+        }
+    </script>
+</body>
+
+</html>

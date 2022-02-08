@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos | JavaScript</title>
+</head>
+
+<body>
+    <h1>Esta página cambia de color aleatoriamente</h1>
+    <button id="cambiarColor">Cambir color</button>
+
+    <script>
+        const btn = document.getElementById("cambiarColor");
+
+        // Funcion para generar numeros aleatorios en el rgb
+        function random(number) {
+            return Math.floor(Math.random() * (number + 1))
+        }
+
+        // Funciona que aplica cambio de color aleatorio con el boton
+        btn.onclick = function() {
+            let colorAleatorio = 'rgb(' + random(255) + ',' + random(255) + ',' + random(255) + ')';
+            console.log(colorAleatorio);
+            // Aplicamos cambio al documento web
+            document.body.style.backgroundColor = colorAleatorio;
+        }
+    </script>
+</body>
+
+</html>
